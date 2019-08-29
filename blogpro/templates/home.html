@@ -1,0 +1,231 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .w3-wide{margin-top: 10px;}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}
+</style>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="media/new.jpg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+    <p id="demo"></p>
+<script>
+var d = new Date();
+d.setFullYear(2020);
+document.getElementById("demo").innerHTML = d;
+</script>
+
+
+<h1 style="padding-bottom: 40px" class="text-center">Welcome To My Block</h1>
+<body style="margin-top: 80px">
+{% block body %}
+    {% endblock %}
+</body>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Yunus</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>I am looking forward to join a progressive organization. I am Strong team builder and leader.
+        I have high level of personal morals and integrity. I am Goal oriented, self-motivated and committed to the successful outcome of the project.
+        I am willing to work hard and have a great desire to learn</p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">Python</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Django</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">CSS & BOOTSTRAP</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
+
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">11+</span><br>
+        Partners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">55+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">89+</span><br>
+        Happy Clients
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Meetings
+      </div>
+    </div>
+
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+
+    </button>
+
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">5GB Storage</li>
+          <li class="w3-padding-16">Mail Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">50GB Storage</li>
+          <li class="w3-padding-16">Endless Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>
+    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+    <p>Jane Doe saved us from a web disaster.</p><br>
+
+    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+    <p>No one is better than Jane Doe.</p>
+  <!-- End About Section -->
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Photos</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="https://scontent.fhyd13-1.fna.fbcdn.net/v/t1.0-9/23754937_155119955100377_8875373029625625522_n.jpg?_nc_cat=109&_nc_oc=AQm6ixBMlrvRcznNDRWej8-A1_a3ITx6ts8twJYKbWUq7BLH7OZR70v3zoj3w5Knito&_nc_ht=scontent.fhyd13-1.fna&oh=0b82d7d7a15097028eb8ab69e2234845&oe=5DD9A871" style="width:350px;height:370px">
+        <img src="https://scontent.fhyd13-1.fna.fbcdn.net/v/t1.0-9/18664297_1688639021431392_3776127450633903385_n.jpg?_nc_cat=105&_nc_oc=AQk71JzW8W2LGt4_DkK3bwwXMNmZFeU0cLI8pyzPxLQ5-upByLc4eFwg5oI8CFp-Zrs&_nc_ht=scontent.fhyd13-1.fna&oh=e659c83ef1666ab9a07aff86403bf2d3&oe=5DCAF98F" style="width:350px;height:350px">
+        <img src="https://scontent.fhyd13-1.fna.fbcdn.net/v/t1.0-9/64816792_2047022352259722_9065681062746652672_n.jpg?_nc_cat=110&_nc_oc=AQki_KgbVRpUg9lPYE4lZyJm3ly5H17NqQiPxk3vX-2W_MhsV4s0lq0kJvLBWu5tdg8&_nc_ht=scontent.fhyd13-1.fna&oh=2b2a820ab99eb78f1086944c4abbe9f7&oe=5DD8EAAC" style="width:350px;height:350px">
+      </div>
+
+      <div class="w3-half">
+        <img src="https://scontent.fhyd13-1.fna.fbcdn.net/v/t1.0-9/53016291_1983989718562986_4882668982739402752_n.jpg?_nc_cat=106&_nc_oc=AQl1X5k3JYVTm1R9RT3rihJyIewpX0h2aP8SqDLMEM71JtCMoIkQthQZQAfFZ0AsuvQ&_nc_ht=scontent.fhyd13-1.fna&oh=7b7e681f109c8344f8009b269dbf95b2&oe=5DE6BEB4" style="width:350px;height: 350px">
+        <img src="https://scontent.fhyd13-1.fna.fbcdn.net/v/t1.0-9/29389189_1793428327619127_1056562345658023936_o.jpg?_nc_cat=103&_nc_oc=AQm2gkHQmwVH2a49ihFCQQkFEXg0us5g2qTK1RfrahvB3VwCS838ZwDJWmBaBxyLdYI&_nc_ht=scontent.fhyd13-1.fna&oh=ba2473fff3c8268288b7a6238cd28806&oe=5E15CE14" style="width:300px;height:400px">
+        <img src="https://scontent.fhyd13-1.fna.fbcdn.net/v/t31.0-8/21768941_1730312260597401_3027274395202741361_o.jpg?_nc_cat=111&_nc_oc=AQkj6x8Z_U2lrbKyTXzbDY0FJsTjc_CZLc7j0QT3_Lz_e74ooBSSNj6zTqm92cHEWIo&_nc_ht=scontent.fhyd13-1.fna&oh=850123293cc1771b2b1b836686070b82&oe=5DCD2AF7" style="width:75%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> India, UP</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +91 9918209432</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: yunuskhan7270@gmail.com</p>
+    </div><br>
+    <p>Lets get in touch. Send me a message:</p>
+
+    <form method="post">
+        {% csrf_token %}
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+   <a href="https://www.facebook.com/people/Yunus-Khan/100008559303950"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+   <a href="https://www.instagram.com/yunus_khan143/"> <i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/Yunus5597"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+     <a href="https://www.linkedin.com/in/mohammad-yunus-ali-04484a14b/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <p class="w3-medium">Thank You.. <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">Visite Again....</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+</body>
+</html>
